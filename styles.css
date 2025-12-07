@@ -1,0 +1,375 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* CSS Custom Properties (Variáveis) */
+:root {
+    --primary-color: #051F34;
+    --secondary-color: #0C3453;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --text-secondary: #555;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: end;
+}
+
+img {
+    width: 300px;
+    margin-bottom: 20px;   
+}
+
+.container-menu {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-menu {
+    margin-right: 50px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-right: 0 10px 0 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.nav-menu li a:hover {
+    background-color: var(--secondary-color)
+}
+
+img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+/* Hero Section */
+.hero {
+    background: var(--secondary-color);
+    color: white;
+    padding: 150px 20px 100px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    /* display: flex; */
+    justify-content: start;
+    margin-left: 50px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    display: inline-block;
+    color: var(--light-bg);
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* transition: transform 0.3s, box-shadow 0.3s; */
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.btn-cta:hover {
+    transition: background-color 0.5s ease-in-out;
+    transition: 0.8 ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);
+    background-color: var(--primary-color);
+    color: var(--light-bg)
+}
+
+/* Seções */
+.section {
+    padding: 80px 20px;
+}
+
+.bg-light {
+    background-color: var(--light-bg);
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 20px auto 0;
+    border-radius: 2px; 
+}
+
+/* Info Boxes */
+.info-box {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+}
+
+.projeto {
+    width: 100px;
+    margin-right: 20px;
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+    color: #051F34;
+}
+
+a:hover {
+    padding: 10px;
+    box-shadow: 1px 1px 20px var(--secondary-color);
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.content-card {
+    margin-top: 20px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.content-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.content-card ul {
+    list-style-position: inside;
+    color: var(--text-secondary);
+}
+
+.content-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.content-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Atuação Grid */
+.atuacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.atuacao-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--primary-color);
+}
+
+.atuacao-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.atuacao-card ul {
+    list-style: none;
+}
+
+.atuacao-card ul li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.atuacao-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Ficha Técnica Table */
+.ficha-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.ficha-table th,
+.ficha-table td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.ficha-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    width: 40%;
+}
+
+.ficha-table td {
+    color: var(--text-secondary);
+}
+
+.ficha-table tr:last-child th,
+.ficha-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 30px; /* Define o tamanho do ícone */
+    height: 30px;
+    vertical-align: middle; /* Ajuda a alinhar com o texto se houver */
+    border-radius: 5px; /* Mantém a forma original da imagem */
+    /* Remove a borda azul padrão que as regras 'a' podem aplicar */
+    border: none;
+    margin: 0 5px; /* Pequeno espaçamento entre os ícones */
+}
+
+/* Garante que o link do ícone não tenha padding/cor de fundo do .footer-links a */
+.footer-links a img {
+    /* Reseta estilos indesejados do link pai para a imagem */
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+    }
+    
+    .content-grid,
+    .atuacao-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ficha-table th,
+    .ficha-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .ficha-table th {
+        border-bottom: none;
+        padding-bottom: 10px;
+    }
+}
